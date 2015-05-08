@@ -34,6 +34,9 @@ class Container(MutableMapping):
     def __getitem__(self, name):
         return self.__dict__[name]
 
+    def __getattr__(self, name):
+        return self.__dict__[name]
+
     def __delitem__(self, name):
         del self.__dict__[name]
 
