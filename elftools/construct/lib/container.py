@@ -15,7 +15,7 @@ def recursion_lock(retval, lock_name = "__recursion_lock__"):
                 return func(self, *args, **kw)
             finally:
                 setattr(self, lock_name, False)
-        wrapper.__name__ = func.__name__
+        #wrapper.__name__ = func.__name__
         return wrapper
     return decorator
 
