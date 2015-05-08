@@ -92,7 +92,10 @@ class Dynamic(object):
         # by using the program headers.
         offset = None
         if ptr:
-            offset = next(self._elffile.address_offsets(ptr), None)
+            try:
+                offset = next(self._elffile.address_offsets(ptr))
+            except StopIteration:
+                pass
 
         return ptr, offset
 
