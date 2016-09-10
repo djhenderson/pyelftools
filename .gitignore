@@ -1,4 +1,5 @@
 *.pyc
+*.pyo
 .coverage
 .tox
 htmlcov
@@ -7,5 +8,3 @@ build
 dist
 MANIFEST
 *.sublime-workspace
-
-
